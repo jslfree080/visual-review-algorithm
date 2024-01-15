@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto Mono');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+}
+
+html {
+    font-family: "Roboto Mono";
+    line-height: 1.5;
+
+    color: black;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: auto 12rem;
+    background-color: #f0f0f0;
+    background-size: 100% 100%, 30% 30%, 100% 100%;
+    min-height: 110rem;
+}
+
+.page {
+    background-color: white;
+    min-height: 110rem;
+}
+
+header {
+    text-align: left;
+}
+
+nav {
+    background-color: #417fb4;
+    height: 60px;
+    width: 100%;
+}
+
+#nav-logo {
+    color: white;
+    font-size: 17px;
+    line-height: 60px;
+    font-weight: 600;
+    padding: 0 20px;
+}
+
+nav ul {
+    float: right;
+    margin-right: 30px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 60px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 17px;
+    padding: 7px 17px;
+    border-radius: 3px;
+    font-weight: 600;
+    /* only when we point on it
+    text-decoration-line: underline; */
+}
+
+nav ul li a:hover {
+    background-color: lightskyblue;
+    color: white;
+}
+
+nav ul li a.active {
+    color: black;
+}
+
+header img {
+    width: 8rem;
+    object-fit: contain;
+    margin: 3rem auto 1rem auto;
+    display: block;
+}
+
+h1 {
+    font-size: 3rem;
+    text-align: center;
+    color: #3f3b00;
+}
+
+main {
+    text-align: center;
+}
