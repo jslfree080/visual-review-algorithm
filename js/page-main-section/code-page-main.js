@@ -22,7 +22,7 @@
 
 const codePageMain = `
 <ul>
-    <li>THIS IS CODE!</li>
+    <li>THIS IS CODE IN MAIN!</li>
 </ul>`
 
 export { codePageMain };
