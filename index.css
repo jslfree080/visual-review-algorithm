@@ -23,6 +23,7 @@ html {
 }
 
 body {
+    /* Narrow width for content */
     margin: auto 12rem;
     background-color: #f0f0f0;
     background-size: 100% 100%, 30% 30%, 100% 100%;
@@ -34,11 +35,11 @@ body {
     min-height: 110rem;
 }
 
-header {
-    text-align: left;
-}
-
 nav {
+    /* Defining an element with position: sticky */
+    position: sticky;
+    top: 0px;
+
     background-color: #417fb4;
     height: 60px;
     width: 100%;
@@ -80,6 +81,10 @@ nav ul li a.active {
     text-decoration-line: underline;
     text-decoration-color: white;
     text-underline-offset: 5px;
+}
+
+header {
+    text-align: left;
 }
 
 header img {

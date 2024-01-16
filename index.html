@@ -13,23 +13,28 @@
     <script type="module" src="js/page-main-section/visualization-page-main.js" defer></script>
 </head>
 
+
+
 <body>
     <!-- new PageConverter(); -->
     <section class="page" id="home-page">
+        <!-- Defining an element (nav) with position: sticky automatically defines the parent element (body) as a sticky container -->
+        <nav>
+            <label id="nav-logo">jslfree080</label>
+            <ul>
+                <li><a id="click-home-page" href="#home-page" class="active">Home</a></li>
+                <li><a id="click-code-page" href="#code-page">Code</a></li>
+                <li><a id="click-visualization-page" href="#visualization-page">Visualization</a></li>
+                <li><a id="click-github-page" href="https://github.com/jslfree080/visual-review-algorithm">Github</a>
+                </li>
+            </ul>
+        </nav>
+
         <header>
-            <nav>
-                <label id="nav-logo">jslfree080</label>
-                <ul>
-                    <li><a id="click-home-page" href="#home-page" class="active">Home</a></li>
-                    <li><a id="click-code-page" href="#code-page">Code</a></li>
-                    <li><a id="click-visualization-page" href="#visualization-page">Visualization</a></li>
-                    <li><a id="click-github-page"
-                            href="https://github.com/jslfree080/visual-review-algorithm">Github</a></li>
-                </ul>
-            </nav>
             <img src="assets/algorithm-logo.png" alt="Reviewing algorithms by visualization" />
             <h1>Just reviewing some algorithms</h1>
         </header>
+
         <main>
             <section class="page-main">
                 <!-- export { homePageMain };
@@ -37,6 +42,7 @@
                 export { visualizationPageMain }; -->
             </section>
         </main>
+
         <footer>
             <p>THIS IS FOOTER!</p>
         </footer>
