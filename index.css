@@ -50,7 +50,7 @@ nav {
     font-size: 17px;
     line-height: 60px;
     font-weight: 600;
-    padding: 0 20px;
+    padding: 0 30px;
 }
 
 nav ul {
@@ -61,7 +61,7 @@ nav ul {
 nav ul li {
     display: inline-block;
     line-height: 60px;
-    margin: 0 5px;
+    margin: 0px 5px;
 }
 
 nav ul li a {
@@ -81,6 +81,21 @@ nav ul li a.active {
     text-decoration-line: underline;
     text-decoration-color: white;
     text-underline-offset: 5px;
+}
+
+nav ul li ul {
+    /* No display when not hovering submenu */
+    display: none;
+    /* Fix position of navigation bar */
+    position: absolute;
+}
+
+nav ul li:hover ul {
+    /* Display submenu vertically */
+    display: block;
+    /* Width of submenu */
+    width: 177px;
+    background-color: #417fb4;
 }
 
 header {

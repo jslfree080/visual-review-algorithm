@@ -101,17 +101,18 @@ class PageConverter {
 
     #highlightButton(key) {
         // Clear all existing styling / highlights
-        for (const page of this.#pages) {
+        for (const page of this.pages) {
             page.setAttribute("class", "");
         }
         // set new style / highlight
         let index = PageConverter.content[key].index;
-        this.#pages[index].setAttribute("class", "active");
+        this.pages[index].setAttribute("class", "active");
     }
 
-    get #pages() {
+    get pages() {
         return [this.#clickHomePage, this.#clickCodePage, this.#clickVisualizationPage, this.#clickGithubPage];
     }
 }
 
 new PageConverter();
+export { PageConverter };

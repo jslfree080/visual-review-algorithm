@@ -20,13 +20,9 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-const homePageMain = `
+const codePageHashTablesSubPageMain = `
 <ul>
-    <li>THIS IS HOME IN MAIN!</li>
-    <br>
-    <li>TODO: Modify active setting when code subpage -> page</li>
-    <li>TODO: Edit page-main-section</li>
-    <li>TODO: Setting when width of page decreases</li>
+    <li>THIS IS Hash Tables IN MAIN!</li>
 </ul>`
 
-export { homePageMain };
+export { codePageHashTablesSubPageMain };

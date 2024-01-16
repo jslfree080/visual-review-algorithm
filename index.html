@@ -5,25 +5,44 @@
     <meta charset="UTF-8">
     <link rel="icon" type="image/svg+xml" href="assets/algorithm-logo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Just some algorithms</title>
+    <title>jslfree080's reviewing some algorithms</title>
     <link rel="stylesheet" href="index.css" />
+
     <script type="module" src="js/page-converter.js" defer></script>
     <script type="module" src="js/page-main-section/home-page-main.js" defer></script>
     <script type="module" src="js/page-main-section/code-page-main.js" defer></script>
     <script type="module" src="js/page-main-section/visualization-page-main.js" defer></script>
+
+    <script type="module" src="js/code-page-sub-page-converter.js" defer></script>
+    <script type="module" src="js/page-main-section/code-page-subpage/code-page-recursion-subpage-main.js"
+        defer></script>
+    <script type="module" src="js/page-main-section/code-page-subpage/code-page-binary-search-subpage-main.js"
+        defer></script>
+    <script type="module" src="js/page-main-section/code-page-subpage/code-page-hash-tables-subpage-main.js"
+        defer></script>
 </head>
 
 
 
 <body>
     <!-- new PageConverter(); -->
-    <section class="page" id="home-page">
+    <!-- new CodePageSubPageConverter(); -->
+    <section id="home-page" class="page">
         <!-- Defining an element (nav) with position: sticky automatically defines the parent element (body) as a sticky container -->
         <nav>
-            <label id="nav-logo">jslfree080</label>
+            <a id="nav-logo" href="">jslfree080</a>
             <ul>
                 <li><a id="click-home-page" href="#home-page" class="active">Home</a></li>
-                <li><a id="click-code-page" href="#code-page">Code</a></li>
+                <li><a id="click-code-page" href="#code-page">Code</a>
+                    <ul>
+                        <li><a id="click-code-page-recursion-subpage" href="#code-page-recursion-subpage">Recursion</a>
+                        </li>
+                        <li><a id="click-code-page-binary-search-subpage" href="#code-page-binary-search-subpage">Binary
+                                Search</a></li>
+                        <li><a id="click-code-page-hash-tables-subpage" href="#code-page-hash-tables-subpage">Hash
+                                Tables</a></li>
+                    </ul>
+                </li>
                 <li><a id="click-visualization-page" href="#visualization-page">Visualization</a></li>
                 <li><a id="click-github-page" href="https://github.com/jslfree080/visual-review-algorithm">Github</a>
                 </li>
@@ -31,8 +50,9 @@
         </nav>
 
         <header>
-            <img src="assets/algorithm-logo.png" alt="Reviewing algorithms by visualization" />
-            <h1>Just reviewing some algorithms</h1>
+            <!-- <img src="assets/algorithm-logo.png" alt="Reviewing algorithms by visualization" />
+            <h1>Just reviewing some algorithms</h1> -->
+            <br>
         </header>
 
         <main>
@@ -43,9 +63,10 @@
             </section>
         </main>
 
-        <footer>
+        <!-- <footer>
+            <br>
             <p>THIS IS FOOTER!</p>
-        </footer>
+        </footer> -->
     </section>
 </body>
 
