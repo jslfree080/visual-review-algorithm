@@ -27,12 +27,12 @@ body {
     margin: auto 12rem;
     background-color: #f0f0f0;
     background-size: 100% 100%, 30% 30%, 100% 100%;
-    min-height: 110rem;
+    min-height: 59rem;
 }
 
 .page {
     background-color: white;
-    min-height: 110rem;
+    min-height: 59rem;
 }
 
 nav {
