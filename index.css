@@ -69,17 +69,17 @@ nav ul li a {
     padding: 7px 17px;
     border-radius: 3px;
     font-weight: 600;
-    /* only when we point on it
-    text-decoration-line: underline; */
 }
 
 nav ul li a:hover {
-    background-color: lightskyblue;
-    color: white;
+    /* background-color: lightskyblue; */
+    color: darkslategray;
 }
 
 nav ul li a.active {
-    color: black;
+    text-decoration-line: underline;
+    text-decoration-color: white;
+    text-underline-offset: 5px;
 }
 
 header img {
