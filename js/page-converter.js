@@ -23,6 +23,7 @@
 import { homePageMain } from './page-main-section/home-page-main.js';
 import { codePageMain } from './page-main-section/code-page-main.js';
 import { visualizationPageMain } from './page-main-section/visualization-page-main.js';
+import { myCodePageSubPageConverter } from './code-page-sub-page-converter.js';
 
 class PageConverter {
     #pageSection;
@@ -104,15 +105,22 @@ class PageConverter {
         for (const page of this.pages) {
             page.setAttribute("class", "");
         }
+        for (const page of myCodePageSubPageConverter.pages) {
+            page.setAttribute("class", "");
+        }
         // set new style / highlight
         let index = PageConverter.content[key].index;
         this.pages[index].setAttribute("class", "active");
     }
 
     get pages() {
-        return [this.#clickHomePage, this.#clickCodePage, this.#clickVisualizationPage, this.#clickGithubPage];
+        return [
+            this.#clickHomePage,
+            this.#clickCodePage,
+            this.#clickVisualizationPage,
+            this.#clickGithubPage
+        ];
     }
 }
 
 new PageConverter();
-export { PageConverter };

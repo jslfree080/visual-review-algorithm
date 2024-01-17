@@ -24,7 +24,6 @@ const homePageMain = `
 <ul>
     <li>THIS IS HOME IN MAIN!</li>
     <br>
-    <li>TODO: Modify active setting when code subpage -> page</li>
     <li>TODO: Edit page-main-section</li>
     <li>TODO: Setting when width of page decreases</li>
 </ul>`

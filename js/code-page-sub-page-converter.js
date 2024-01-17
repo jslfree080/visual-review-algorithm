@@ -23,7 +23,6 @@
 import { codePageRecursionSubPageMain } from './page-main-section/code-page-subpage/code-page-recursion-subpage-main.js';
 import { codePageBinarySearchSubPageMain } from './page-main-section/code-page-subpage/code-page-binary-search-subpage-main.js';
 import { codePageHashTablesSubPageMain } from './page-main-section/code-page-subpage/code-page-hash-tables-subpage-main.js';
-import { PageConverter } from './page-converter.js';
 
 class CodePageSubPageConverter {
     #pageSection;
@@ -31,7 +30,6 @@ class CodePageSubPageConverter {
     #clickCodePageBinarySearchSubPage;
     #clickCodePageHashTablesSubPage;
     #pageMainSection;
-    #myPageConverter;
 
     static content = {
         codePageRecursionSubPage: {
@@ -63,8 +61,6 @@ class CodePageSubPageConverter {
         this.#setClickCodePageBinarySearchSubPage(clickCodePageBinarySearchSubPage);
         this.#setClickCodePageHashTablesSubPage(clickCodePageHashTablesSubPage);
         this.#pageMainSection = pageMainSection;
-
-        this.#myPageConverter = new PageConverter();
     }
 
     #setClickCodePageRecursionSubPage(value) {
@@ -90,7 +86,11 @@ class CodePageSubPageConverter {
 
     #highlightButton(key) {
         // Clear all existing styling / highlights
-        for (const page of this.#myPageConverter.pages) {
+        for (const page of [
+            document.getElementById("click-home-page"),
+            document.getElementById("click-code-page"),
+            document.getElementById("click-visualization-page")
+        ]) {
             page.setAttribute("class", "");
         }
         for (const page of this.pages) {
@@ -99,11 +99,18 @@ class CodePageSubPageConverter {
         // set new style / highlight
         let index = CodePageSubPageConverter.content[key].index;
         this.pages[index].setAttribute("class", "active");
+        document.getElementById("click-code-page").setAttribute("class", "active");
     }
 
     get pages() {
-        return [this.#clickCodePageRecursionSubPage, this.#clickCodePageBinarySearchSubPage, this.#clickCodePageHashTablesSubPage];
+        return [
+            this.#clickCodePageRecursionSubPage,
+            this.#clickCodePageBinarySearchSubPage,
+            this.#clickCodePageHashTablesSubPage
+        ];
     }
 }
 
-new CodePageSubPageConverter();
+const myCodePageSubPageConverter = new CodePageSubPageConverter();
+
+export { myCodePageSubPageConverter };
