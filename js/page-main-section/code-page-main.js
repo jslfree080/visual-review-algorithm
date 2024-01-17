@@ -22,7 +22,9 @@
 
 const codePageMain = `
 <ul>
-    <li>This is Code!</li>
+    <br>
+    <li>Explore submenu for algorithm topics!</li>
+    <img id="vanilla" src="assets/vanilla-icecream-logo.png" alt="Home Page Main" width="150" height="150" />
 </ul>`
 
 export { codePageMain };

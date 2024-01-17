@@ -27,12 +27,12 @@ body {
     margin: auto 12rem;
     background-color: #f0f0f0;
     background-size: 100% 100%, 30% 30%, 100% 100%;
-    min-height: 59rem;
+    min-height: 53rem;
 }
 
 .page {
     background-color: white;
-    min-height: 59rem;
+    min-height: 53rem;
 }
 
 nav {
@@ -96,6 +96,7 @@ nav ul li:hover ul {
     /* Width of submenu */
     width: 177px;
     background-color: #417fb4;
+    border-radius: 10px;
 }
 
 header {

@@ -22,10 +22,12 @@
 
 const homePageMain = `
 <ul>
-    <li>This is Home!</li>
     <br>
-    <li>TODO: Edit page-main-section</li>
-    <li>TODO: Setting when width of page decreases</li>
+    <li>Welcome!</li>
+    <img id="vanilla" src="assets/vanilla-icecream-logo.png" alt="Home Page Main" width="150" height="150" />
 </ul>`
 
 export { homePageMain };
+
+// TODO: Edit page-main-section
+// TODO: Setting when width of page decreases

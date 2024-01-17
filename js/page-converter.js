@@ -32,6 +32,7 @@ class PageConverter {
     #clickVisualizationPage;
     #clickGithubPage;
     #pageMainSection;
+    #submenu;
 
     static content = {
         homePage: {
@@ -60,7 +61,8 @@ class PageConverter {
         clickCodePage = document.getElementById("click-code-page"),
         clickVisualizationPage = document.getElementById("click-visualization-page"),
         clickGithubPage = document.getElementById("click-github-page"),
-        pageMainSection = document.getElementsByClassName("page-main")
+        pageMainSection = document.getElementsByClassName("page-main"),
+        submenu = document.getElementsByClassName('submenu')
     ) {
         this.#pageSection = pageSection;
         this.#setClickHomePage(clickHomePage);
@@ -68,6 +70,7 @@ class PageConverter {
         this.#setClickVisualizationPage(clickVisualizationPage);
         this.#setClickGithubPage(clickGithubPage);
         this.#pageMainSection = pageMainSection;
+        this.#submenu = submenu;
 
         this.#displayContent("homePage");
     }
@@ -94,9 +97,22 @@ class PageConverter {
 
     #displayContent(key) {
         this.#highlightButton(key);
+        this.#hideShowSubmenu(key);
         if (key !== "githubPage") {
             this.#pageSection[0].setAttribute("id", PageConverter.content[key].id);
             this.#pageMainSection[0].innerHTML = PageConverter.content[key].main;
+        }
+    }
+
+    #hideShowSubmenu(key) {
+        if (key === "codePage") {
+            for (const submenu of this.#submenu) {
+                if (submenu.style.display === "none") {
+                    submenu.style.display = "block";
+                } else {
+                    submenu.style.display = "none";
+                }
+            }
         }
     }
 
