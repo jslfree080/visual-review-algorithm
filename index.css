@@ -120,5 +120,8 @@ main {
 }
 
 footer {
+    color: white;
+    background-color: #417fb4;
     text-align: center;
+    font-size: 13px;
 }
