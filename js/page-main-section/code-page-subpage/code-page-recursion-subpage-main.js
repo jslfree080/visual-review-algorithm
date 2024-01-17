@@ -22,7 +22,7 @@
 
 const codePageRecursionSubPageMain = `
 <ul>
-    <li>THIS IS Recursion IN MAIN!</li>
+    <li>This is Recursion!</li>
 </ul>`
 
 export { codePageRecursionSubPageMain };

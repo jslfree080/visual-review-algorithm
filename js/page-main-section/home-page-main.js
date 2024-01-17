@@ -22,7 +22,7 @@
 
 const homePageMain = `
 <ul>
-    <li>THIS IS HOME IN MAIN!</li>
+    <li>This is Home!</li>
     <br>
     <li>TODO: Edit page-main-section</li>
     <li>TODO: Setting when width of page decreases</li>

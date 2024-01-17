@@ -22,7 +22,7 @@
 
 const visualizationPageMain = `
 <ul>
-    <li>THIS IS VISUALIZATION IN MAIN!</li>
+    <li>This is Visualization!</li>
 </ul>`
 
 export { visualizationPageMain };

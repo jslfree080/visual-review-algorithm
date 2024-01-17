@@ -22,7 +22,7 @@
 
 const codePageHashTablesSubPageMain = `
 <ul>
-    <li>THIS IS Hash Tables IN MAIN!</li>
+    <li>This is Hash Tables!</li>
 </ul>`
 
 export { codePageHashTablesSubPageMain };

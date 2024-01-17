@@ -22,7 +22,7 @@
 
 const codePageBinarySearchSubPageMain = `
 <ul>
-    <li>THIS IS Binary Search IN MAIN!</li>
+    <li>This is Binary Search!</li>
 </ul>`
 
 export { codePageBinarySearchSubPageMain };
