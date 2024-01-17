@@ -122,6 +122,8 @@ main {
 footer {
     color: white;
     background-color: #417fb4;
+    height: 27px;
+    line-height: 27px;
     text-align: center;
     font-size: 13px;
 }
