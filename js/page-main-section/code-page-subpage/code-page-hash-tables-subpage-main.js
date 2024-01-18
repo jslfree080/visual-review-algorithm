@@ -22,6 +22,7 @@
 
 const codePageHashTablesSubPageMain = `
 <ul>
+    <br>
     <li>This is Hash Tables!</li>
 </ul>`
 

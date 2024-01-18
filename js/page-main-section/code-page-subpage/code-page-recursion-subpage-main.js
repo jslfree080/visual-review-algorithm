@@ -22,7 +22,26 @@
 
 const codePageRecursionSubPageMain = `
 <ul>
-    <li>This is Recursion!</li>
-</ul>`
+                    <section class="sidebar">
+                        <ul id="recursion-sidemenu" class="sidemenu">
+                            <li><a href="#recursion-subpage-recursion">&nbsp;1. Capitalize First</a></li>
+                            <li><a href="#recursion-subpage-recursion">&nbsp;2. Capitalize Words</a></li>
+                            <li><a href="#recursion-subpage-recursion">&nbsp;3. Collect Strings</a></li>
+                            <li><a href="#recursion-subpage-recursion">&nbsp;4. Factorial</a></li>
+                            <li><a href="#recursion-subpage-recursion">&nbsp;5. Fibonacci</a></li>
+                            <li><a href="#recursion-subpage-recursion">&nbsp;6. First Recursive Function</a></li>
+                            <li><a href="#recursion-subpage-recursion">&nbsp;7. Flatten</a></li>
+                            <li><a href="#recursion-subpage-recursion">&nbsp;8. Is Palindrome</a></li>
+                            <li><a href="#recursion-subpage-recursion">&nbsp;9. Nested Even Sum</a></li>
+                            <li><a href="#recursion-subpage-recursion">10. Power</a></li>
+                            <li><a href="#recursion-subpage-recursion">11. Product of Array</a></li>
+                            <li><a href="#recursion-subpage-recursion">12. Pure Recursion</a></li>
+                            <li><a href="#recursion-subpage-recursion">13. Recursive Range</a></li>
+                            <li><a href="#recursion-subpage-recursion">14. Reverse</a></li>
+                            <li><a href="#recursion-subpage-recursion">15. Some Recursive</a></li>
+                            <li><a href="#recursion-subpage-recursion">16. Stringify Numbers</a></li>
+                        </ul>
+                    </section>
+                </ul>`
 
 export { codePageRecursionSubPageMain };

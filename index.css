@@ -50,7 +50,7 @@ nav {
     font-size: 17px;
     line-height: 60px;
     font-weight: 600;
-    padding: 0 30px;
+    padding: 0 18px;
 }
 
 nav ul {
@@ -118,6 +118,40 @@ h1 {
 
 main {
     text-align: center;
+}
+
+/* page-main */
+.sidebar {
+    padding: 70px 0px;
+    background-color: #f0f0f0;
+    width: 260px;
+    height: 53rem;
+}
+
+.sidemenu {
+    padding: 10px 0px 10px 0px;
+    display: block;
+    background-color: #417fb4;
+    text-align: left;
+    font-size: 14px;
+}
+
+.sidemenu li:hover {
+    width: 260px;
+    background-color: lightblue;
+}
+
+.sidemenu li a {
+    margin-left: 10px;
+    color: white;
+}
+
+.sidemenu li a:hover {
+    color: darkslategray;
+}
+
+#recursion-sidemenu {
+    display: block;
 }
 
 footer {

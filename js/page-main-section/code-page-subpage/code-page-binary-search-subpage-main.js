@@ -22,6 +22,7 @@
 
 const codePageBinarySearchSubPageMain = `
 <ul>
+    <br>
     <li>This is Binary Search!</li>
 </ul>`
 
