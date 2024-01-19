@@ -142,6 +142,8 @@ main {
 }
 
 .sidemenu li a {
+    /* Avoid only text in link box is clickable */
+    display: block;
     margin-left: 10px;
     color: white;
 }
