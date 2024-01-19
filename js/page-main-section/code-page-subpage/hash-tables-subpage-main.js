@@ -20,10 +20,10 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-const visualizationPageMain = `
+const hashTablesSubpageMain = `
 <ul>
     <br>
-    <li>Visualization: To be updated...</li>
+    <li>Hash Tables: To be updated...</li>
 </ul>`
 
-export { visualizationPageMain };
+export { hashTablesSubpageMain };

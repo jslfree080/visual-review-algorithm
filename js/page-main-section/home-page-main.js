@@ -29,5 +29,4 @@ const homePageMain = `
 
 export { homePageMain };
 
-// TODO: Edit page-main-section
 // TODO: Setting when width of page decreases

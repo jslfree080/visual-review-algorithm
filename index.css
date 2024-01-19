@@ -37,6 +37,7 @@ body {
 
 nav {
     /* Defining an element with position: sticky */
+    z-index: 1;
     position: sticky;
     top: 0px;
 
@@ -121,6 +122,18 @@ main {
 }
 
 /* page-main */
+.sidepage-main {
+    position: absolute;
+    top: 130px;
+    left: 600px;
+    padding: 1rem;
+    border-radius: 6px;
+    color: #ebe7ef;
+    text-align: left;
+    background-color: #2f1d43;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
 .sidebar {
     padding: 70px 0px;
     background-color: #f0f0f0;

@@ -23,7 +23,7 @@
 import { homePageMain } from './page-main-section/home-page-main.js';
 import { codePageMain } from './page-main-section/code-page-main.js';
 import { visualizationPageMain } from './page-main-section/visualization-page-main.js';
-import { myCodePageSubPageConverter } from './code-page-sub-page-converter.js';
+import { myCodePageSubpageConverter } from './code-page-subpage-converter.js';
 
 class PageConverter {
     #pageSection;
@@ -97,6 +97,7 @@ class PageConverter {
 
     #displayContent(key) {
         this.#highlightButton(key);
+        this.#pageSection[0].style.backgroundColor = "white";
         this.#hideShowSubmenu(key);
         if (key !== "githubPage") {
             this.#pageSection[0].setAttribute("id", PageConverter.content[key].id);
@@ -121,7 +122,7 @@ class PageConverter {
         for (const page of this.pages) {
             page.setAttribute("class", "");
         }
-        for (const page of myCodePageSubPageConverter.pages) {
+        for (const page of myCodePageSubpageConverter.pages) {
             page.setAttribute("class", "");
         }
         // set new style / highlight

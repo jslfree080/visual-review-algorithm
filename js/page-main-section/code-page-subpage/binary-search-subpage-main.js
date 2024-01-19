@@ -20,10 +20,10 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-const codePageHashTablesSubPageMain = `
+const binarySearchSubpageMain = `
 <ul>
     <br>
-    <li>This is Hash Tables!</li>
+    <li>Binary Search: To be updated...</li>
 </ul>`
 
-export { codePageHashTablesSubPageMain };
+export { binarySearchSubpageMain };
