@@ -23,8 +23,8 @@ html {
 }
 
 body {
-    /* Narrow width for content */
-    margin: auto 12rem;
+    /* Narrow width for page */
+    margin: auto 13.5%;
     background-color: #f0f0f0;
     background-size: 100% 100%, 30% 30%, 100% 100%;
     min-height: 53rem;
@@ -65,6 +65,14 @@ nav ul li {
     margin: 0px 5px;
 }
 
+@media screen and (max-width: 1120px) {
+    nav ul li {
+        display: block;
+        background-color: #417fb4;
+        border-block: 0.5px solid white;
+    }
+}
+
 nav ul li a {
     color: white;
     font-size: 17px;
@@ -95,6 +103,7 @@ nav ul li:hover ul {
     /* Display submenu vertically */
     display: block;
     /* Width of submenu */
+    /* 14vw */
     width: 177px;
     background-color: #417fb4;
     border-radius: 10px;
@@ -125,7 +134,7 @@ main {
 .sidepage-main {
     position: absolute;
     top: 130px;
-    margin-left: 264px;
+    margin-left: 18.5%;
     width: 54%;
     padding: 1rem;
     border-radius: 6px;
@@ -138,7 +147,7 @@ main {
 .sidebar {
     padding: 70px 0px;
     background-color: #f0f0f0;
-    width: 260px;
+    width: 25%;
     height: 53rem;
 }
 
@@ -147,7 +156,8 @@ main {
     display: block;
     background-color: #417fb4;
     text-align: left;
-    font-size: 14px;
+    /* 14px */
+    font-size: 1vw;
 }
 
 .sidemenu li:hover {

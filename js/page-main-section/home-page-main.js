@@ -28,5 +28,3 @@ const homePageMain = `
 </ul>`
 
 export { homePageMain };
-
-// TODO: Setting when width of page decreases
