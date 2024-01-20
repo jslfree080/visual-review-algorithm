@@ -78,11 +78,15 @@ class CodePageSubpageConverter {
         this.#clickHashTablesSubpage.addEventListener("click", () => this.#displayContent("hashTablesSubpage"));
     }
 
-    #displayContent(key) {
+    async #displayContent(key) {
         this.#highlightButton(key);
         this.#pageSection[0].style.backgroundColor = "#FFFEE9";
         this.#pageSection[0].setAttribute("id", CodePageSubpageConverter.content[key].id);
         this.#pageMainSection[0].innerHTML = CodePageSubpageConverter.content[key].main;
+
+        // For "sidepage" and "sidepage-main", getElementsByClassName works only after CodePageSubpageConverter.content[key].main is written
+        const { CodePageSubpageSidepageConverter } = await import(`./code-page-subpage-sidepage-converter.js`);
+        new CodePageSubpageSidepageConverter();
     }
 
     #highlightButton(key) {

@@ -20,3 +20,32 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
+import { recursionSubpageItem } from './page-main-section/code-page-subpage/recursion-subpage-main.js';
+
+export class CodePageSubpageSidepageConverter {
+    #sidepageSection;
+    #recursionSubpageItem;
+    #sidepageMainSection;
+
+    constructor(
+        sidepageSection = document.getElementsByClassName("sidepage"),
+        sidepageMainSection = document.getElementsByClassName("sidepage-main")
+    ) {
+        this.#sidepageSection = sidepageSection;
+        this.#setClickCodePageSubpageSidepage(recursionSubpageItem);
+        this.#sidepageMainSection = sidepageMainSection;
+    }
+
+    #setClickCodePageSubpageSidepage(value) {
+        this.#recursionSubpageItem = value;
+        for (const key of Object.keys(this.#recursionSubpageItem)) {
+            const key2 = "click-" + key.toLowerCase().replace(/ /g, "-") + "-sidepage";
+            document.getElementById(key2).addEventListener("click", () => this.#displayContent(key));
+        }
+    }
+
+    #displayContent(key) {
+        this.#sidepageSection[0].setAttribute("id", key.toLowerCase().replace(/ /g, "-"));
+        this.#sidepageMainSection[0].innerHTML = `<pre><code>${this.#recursionSubpageItem[key]}</code></pre>`;
+    }
+}

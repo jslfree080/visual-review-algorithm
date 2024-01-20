@@ -125,7 +125,8 @@ main {
 .sidepage-main {
     position: absolute;
     top: 130px;
-    left: 600px;
+    margin-left: 264px;
+    width: 54%;
     padding: 1rem;
     border-radius: 6px;
     color: #ebe7ef;
@@ -150,7 +151,6 @@ main {
 }
 
 .sidemenu li:hover {
-    width: 260px;
     background-color: lightblue;
 }
 
