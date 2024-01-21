@@ -19,7 +19,9 @@
         <!-- Defining an element (nav) with position: sticky automatically defines the parent element (body) as a sticky container -->
         <nav>
             <a id="nav-logo" href="">visual-review-algorithm</a>
-            <ul>
+            <button class="navbar-toggle"
+                onclick="document.querySelector('.navbar-links').classList.toggle('show');">☰</button>
+            <ul class="navbar-links">
                 <li><a id="click-home-page" href="#home-page" class="active">Home</a></li>
                 <li><a id="click-code-page" href="#code-page">Code ▾</a>
                     <ul>

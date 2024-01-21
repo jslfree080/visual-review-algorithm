@@ -12,9 +12,7 @@
 html {
     font-family: "Roboto Mono";
     line-height: 1.5;
-
     color: black;
-
     font-synthesis: none;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -32,6 +30,7 @@ body {
 
 @media screen and (max-width: 1120px) {
     body {
+        /* Remove blank space for page */
         margin: auto;
     }
 }
@@ -42,11 +41,9 @@ body {
 }
 
 nav {
-    /* Defining an element with position: sticky */
+    /* Always top layer & Defining an element with position: sticky */
     z-index: 1;
     position: sticky;
-    top: 0px;
-
     background-color: #417fb4;
     height: 60px;
     width: 100%;
@@ -60,10 +57,38 @@ nav {
     padding: 0 18px;
 }
 
+.navbar-toggle {
+    position: absolute;
+    display: none;
+    top: 10px;
+    right: 5px;
+}
+
+@media screen and (max-width: 1120px) {
+    .navbar-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 30px;
+        width: 40px;
+    }
+}
+
 nav ul {
     float: right;
     margin-right: 30px;
     padding: 9px 0px 9px 0px;
+}
+
+@media screen and (max-width: 1120px) {
+    nav ul {
+        margin-right: 47px;
+        display: none;
+    }
+
+    nav ul.show {
+        margin-right: 47px;
+        display: flex;
+    }
 }
 
 nav ul li {
@@ -73,7 +98,6 @@ nav ul li {
 
 @media screen and (max-width: 1120px) {
     nav ul li {
-        display: block;
         background-color: #417fb4;
     }
 }
@@ -111,7 +135,8 @@ nav ul li:hover ul {
     background-color: #417fb4;
 }
 
-nav ul li:hover ul li a {
+nav ul li:hover ul li {
+    /* Display submenu vertically from the start */
     display: block;
 }
 

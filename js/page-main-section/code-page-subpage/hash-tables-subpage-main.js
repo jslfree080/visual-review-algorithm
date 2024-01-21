@@ -22,7 +22,7 @@
 
 const hashTablesSubpageMain = `
 <ul>
-    <br>
+    <br><br><br>
     <li>Hash Tables: To be updated...</li>
 </ul>`
 

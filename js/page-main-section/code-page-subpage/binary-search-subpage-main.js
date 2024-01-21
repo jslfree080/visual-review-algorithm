@@ -22,7 +22,7 @@
 
 const binarySearchSubpageMain = `
 <ul>
-    <br>
+    <br><br><br>
     <li>Binary Search: To be updated...</li>
 </ul>`
 

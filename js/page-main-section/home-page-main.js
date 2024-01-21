@@ -22,7 +22,7 @@
 
 const homePageMain = `
 <ul>
-    <br>
+    <br><br><br>
     <li>Welcome!</li>
     <img id="vanilla" src="assets/vanilla-icecream-logo.png" alt="Home Page Main" width="150" height="150" />
 </ul>`

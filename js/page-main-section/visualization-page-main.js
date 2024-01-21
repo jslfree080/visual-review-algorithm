@@ -22,7 +22,7 @@
 
 const visualizationPageMain = `
 <ul>
-    <br>
+    <br><br><br>
     <li>Visualization: To be updated...</li>
 </ul>`
 
