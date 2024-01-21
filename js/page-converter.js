@@ -97,7 +97,9 @@ class PageConverter {
 
     #displayContent(key) {
         this.#highlightButton(key);
-        this.#pageSection[0].style.backgroundColor = "white";
+        if (key !== "githubPage") {
+            this.#pageSection[0].style.backgroundColor = "white";
+        }
         this.#hideShowSubmenu(key);
         if (key !== "githubPage") {
             this.#pageSection[0].setAttribute("id", PageConverter.content[key].id);
