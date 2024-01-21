@@ -175,30 +175,26 @@ const recursionSubpageItem = {
 }`
 };
 
+let recursionSubpageItemTranslated = ``;
+let counter = 1;
+let space = "";
+for (const key of Object.keys(recursionSubpageItem)) {
+    if (counter < 10) {
+        space = "&nbsp;";
+    } else {
+        space = "";
+    }
+    recursionSubpageItemTranslated += `<li><a id="click-${key.toLowerCase().replace(/ /g, "-")}-sidepage" href="#${key.toLowerCase().replace(/ /g, "-")}-sidepage">${space}${counter}. ${key}</a></li>`;
+    counter++;
+}
+
 let recursionSubpageMain = `
 <ul id="capitalize-first-sidepage" class="sidepage">
                     <section class="sidepage-main">
                         <pre><code>${recursionSubpageItem["Capitalize First"]}</code></pre>
                     </section>
                     <section class="sidebar">
-                        <ul id="recursion-sidemenu" class="sidemenu">
-                            <li><a id="click-capitalize-first-sidepage" href="#capitalize-first-sidepage">&nbsp;1. Capitalize First</a></li>
-                            <li><a id="click-capitalize-words-sidepage" href="#capitalize-words-sidepage">&nbsp;2. Capitalize Words</a></li>
-                            <li><a id="click-collect-odd-values-sidepage" href="#collect-odd-values-sidepage">&nbsp;3. Collect Odd Values</a></li>
-                            <li><a id="click-collect-strings-sidepage" href="#collect-strings-sidepage">&nbsp;4. Collect Strings</a></li>
-                            <li><a id="click-factorial-sidepage" href="#factorial-sidepage">&nbsp;5. Factorial</a></li>
-                            <li><a id="click-fibonacci-sidepage" href="#fibonacci-sidepage">&nbsp;6. Fibonacci</a></li>
-                            <li><a id="click-first-recursive-function-sidepage" href="#first-recursive-function-sidepage">&nbsp;7. First Recursive Function</a></li>
-                            <li><a id="click-flatten-sidepage" href="#flatten-sidepage">&nbsp;8. Flatten</a></li>
-                            <li><a id="click-is-palindrome-sidepage" href="#is-palindrome-sidepage">&nbsp;9. Is Palindrome</a></li>
-                            <li><a id="click-nested-even-sum-sidepage" href="#nested-even-sum-sidepage">10. Nested Even Sum</a></li>
-                            <li><a id="click-power-sidepage" href="#power-sidepage">11. Power</a></li>
-                            <li><a id="click-product-of-array-sidepage" href="#product-of-array-sidepage">12. Product of Array</a></li>
-                            <li><a id="click-recursive-range-sidepage" href="#recursive-range-sidepage">13. Recursive Range</a></li>
-                            <li><a id="click-reverse-sidepage" href="#reverse-sidepage">14. Reverse</a></li>
-                            <li><a id="click-some-recursive-sidepage" href="#some-recursive-sidepage">15. Some Recursive</a></li>
-                            <li><a id="click-stringify-numbers-sidepage" href="#stringify-numbers-sidepage">16. Stringify Numbers</a></li>
-                        </ul>
+                        <ul id="recursion-sidemenu" class="sidemenu">` + recursionSubpageItemTranslated + `</ul>
                     </section>
                 </ul>`;
 
