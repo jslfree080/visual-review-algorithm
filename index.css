@@ -30,6 +30,12 @@ body {
     min-height: 53rem;
 }
 
+@media screen and (max-width: 1120px) {
+    body {
+        margin: auto;
+    }
+}
+
 .page {
     background-color: white;
     min-height: 53rem;
@@ -57,27 +63,27 @@ nav {
 nav ul {
     float: right;
     margin-right: 30px;
+    padding: 9px 0px 9px 0px;
 }
 
 nav ul li {
     display: inline-block;
     line-height: 60px;
-    margin: 0px 5px;
 }
 
 @media screen and (max-width: 1120px) {
     nav ul li {
         display: block;
         background-color: #417fb4;
-        border-block: 0.5px solid white;
     }
 }
 
 nav ul li a {
+    display: block;
+    line-height: 28px;
     color: white;
     font-size: 17px;
     padding: 7px 17px;
-    border-radius: 3px;
     font-weight: 600;
 }
 
@@ -102,11 +108,18 @@ nav ul li ul {
 nav ul li:hover ul {
     /* Display submenu vertically */
     display: block;
-    /* Width of submenu */
-    /* 14vw */
-    width: 177px;
     background-color: #417fb4;
-    border-radius: 10px;
+}
+
+nav ul li:hover ul li a {
+    display: block;
+}
+
+@media screen and (max-width: 1120px) {
+    nav ul li:hover ul li a {
+        font-size: 14.6px;
+        line-height: 20px;
+    }
 }
 
 header {
@@ -144,6 +157,13 @@ main {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
+@media screen and (max-width: 1120px) {
+    .sidepage-main {
+        margin-left: 25.8%;
+        width: 74.4%;
+    }
+}
+
 .sidebar {
     padding: 70px 0px;
     background-color: #f0f0f0;
@@ -158,6 +178,12 @@ main {
     text-align: left;
     /* 14px */
     font-size: 1vw;
+}
+
+@media screen and (max-width: 1120px) {
+    .sidemenu {
+        padding: 5px 0px 5px 0px;
+    }
 }
 
 .sidemenu li:hover {
