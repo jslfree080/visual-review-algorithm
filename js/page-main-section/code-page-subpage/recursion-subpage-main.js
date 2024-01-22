@@ -199,9 +199,9 @@ for (const key of Object.keys(recursionSubpageItem)) {
 }
 
 let recursionSubpageMain = `
-<ul id="capitalize-first-sidepage" class="sidepage">
+<ul id="${Object.keys(recursionSubpageItem)[0].toLowerCase().replace(/ /g, "-")}-sidepage" class="sidepage">
                     <section class="sidepage-main">
-                        <pre><code>${recursionSubpageItem["Capitalize First"]}</code></pre>
+                        <pre><code>${recursionSubpageItem[Object.keys(recursionSubpageItem)[0]]}</code></pre>
                     </section>
                     <section class="sidebar">
                         <ul id="recursion-sidemenu" class="sidemenu">` + recursionSubpageItemTranslated + `</ul>
