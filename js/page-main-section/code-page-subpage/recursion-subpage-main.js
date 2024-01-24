@@ -31,6 +31,37 @@ const recursionSubpageItem = {
         return ackermann(m - 1, ackermann(m, n - 1));
     }
 }`,
+    "Binary Search":
+        `function binarySearch(sortedArray, value) {
+    let counter = 0;
+    function helper(sortedArrayHelper, valueHelper) {
+        let leftPointer = sortedArrayHelper[0];
+        let rightPointer = sortedArrayHelper[sortedArrayHelper.length - 1];
+        let midIndex = Math.floor((sortedArrayHelper.length - 1) / 2);
+        let midPointer = sortedArrayHelper[midIndex];
+        if (
+            (sortedArrayHelper.length <= 2)
+            && (valueHelper !== leftPointer)
+            && (valueHelper !== rightPointer)
+        ) return -1;
+        if (valueHelper < midPointer) {
+            return helper(sortedArrayHelper.slice(0, midIndex + 1), valueHelper);
+        } else if (valueHelper > midPointer) {
+            counter += midIndex;
+            if (
+                (sortedArrayHelper.length <= 2)
+                && (valueHelper === rightPointer)
+            ) return counter + 1;
+            return helper(
+                sortedArrayHelper.slice(midIndex, sortedArrayHelper.length), valueHelper
+            );
+        } else {
+            counter += midIndex;
+            return counter;
+        }
+    }
+    return helper(sortedArray, value);
+}`,
     "Capitalize First":
         `function capitalizeFirst(arrayOfStrings) {
     let newArray = [];
