@@ -116,6 +116,16 @@ const recursionSubpageItem = {
     helper(object);
     return newArray;
 }`,
+    "Count Down":
+        `function countDown(num) {
+    if (num <= 0) {
+        console.log('All done!');
+        return;
+    }
+    console.log(num);
+    num--;
+    countDown(num);
+}`,
     "Factorial":
         `function factorial(num) {
     if (num === 1) return 1;
@@ -125,16 +135,6 @@ const recursionSubpageItem = {
         `function fibonacci(n) {
     if (n <= 2) return 1;
     return fibonacci(n - 1) + fibonacci(n - 2);
-}`,
-    "First Recursive Function":
-        `function countDown(num) {
-    if (num <= 0) {
-        console.log('All done!');
-        return;
-    }
-    console.log(num);
-    num--;
-    countDown(num);
 }`,
     "Flatten":
         `function flatten(arrayOfArrays) {
