@@ -161,6 +161,25 @@ const recursionSubpageItem = {
     if (string === newString) return true;
     else return false;
 }`,
+    "Naive String Search":
+        `function naiveStringSearch(long, short) {
+    let counter = 0;
+    function helper(long, short) {
+        let longMatch = long;
+        let shortMatch = short;
+        if (shortMatch.length > longMatch.length) return counter;
+        while (longMatch[0] === shortMatch[0]) {
+            if (shortMatch.length === 1) {
+                counter++;
+                break;
+            }
+            longMatch = longMatch.substring(1);
+            shortMatch = shortMatch.substring(1);
+        }
+        return helper(long.substring(1), short);
+    }
+    return helper(long, short);
+}`,
     "Nested Even Sum":
         `function nestedEvenSum(object) {
     let newNumber = 0;
