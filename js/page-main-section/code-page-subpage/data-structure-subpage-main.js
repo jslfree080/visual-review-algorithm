@@ -20,10 +20,10 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-const hashTablesSubpageMain = `
+const dataStructureSubpageMain = `
 <ul>
     <br><br><br>
-    <li>Hash Tables: To be updated...</li>
+    <li>Data Structure: To be updated...</li>
 </ul>`
 
-export { hashTablesSubpageMain };
+export { dataStructureSubpageMain };

@@ -21,14 +21,12 @@
 // SOFTWARE.
 
 import { recursionSubpageMain } from './page-main-section/code-page-subpage/recursion-subpage-main.js';
-import { binarySearchSubpageMain } from './page-main-section/code-page-subpage/binary-search-subpage-main.js';
-import { hashTablesSubpageMain } from './page-main-section/code-page-subpage/hash-tables-subpage-main.js';
+import { dataStructureSubpageMain } from './page-main-section/code-page-subpage/data-structure-subpage-main.js';
 
 class CodePageSubpageConverter {
     #pageSection;
     #clickRecursionSubpage;
-    #clickBinarySearchSubpage;
-    #clickHashTablesSubpage;
+    #clickDataStructureSubpage;
     #pageMainSection;
 
     static content = {
@@ -37,29 +35,22 @@ class CodePageSubpageConverter {
             id: "recursion-subpage",
             main: recursionSubpageMain
         },
-        binarySearchSubpage: {
+        dataStructureSubpage: {
             index: 1,
-            id: "binary-search-subpage",
-            main: binarySearchSubpageMain
-        },
-        hashTablesSubpage: {
-            index: 2,
-            id: "hash-tables-subpage",
-            main: hashTablesSubpageMain
+            id: "data-structure-subpage",
+            main: dataStructureSubpageMain
         }
     }
 
     constructor(
         pageSection = document.getElementsByClassName("page"),
         clickRecursionSubpage = document.getElementById("click-recursion-subpage"),
-        clickBinarySearchSubpage = document.getElementById("click-binary-search-subpage"),
-        clickHashTablesSubpage = document.getElementById("click-hash-tables-subpage"),
+        clickDataStructureSubpage = document.getElementById("click-data-structure-subpage"),
         pageMainSection = document.getElementsByClassName("page-main")
     ) {
         this.#pageSection = pageSection;
         this.#setClickRecursionSubpage(clickRecursionSubpage);
-        this.#setClickBinarySearchSubpage(clickBinarySearchSubpage);
-        this.#setClickHashTablesSubpage(clickHashTablesSubpage);
+        this.#setClickDataStructureSubpage(clickDataStructureSubpage);
         this.#pageMainSection = pageMainSection;
     }
 
@@ -68,14 +59,9 @@ class CodePageSubpageConverter {
         this.#clickRecursionSubpage.addEventListener("click", () => this.#displayContent("recursionSubpage"));
     }
 
-    #setClickBinarySearchSubpage(value) {
-        this.#clickBinarySearchSubpage = value;
-        this.#clickBinarySearchSubpage.addEventListener("click", () => this.#displayContent("binarySearchSubpage"));
-    }
-
-    #setClickHashTablesSubpage(value) {
-        this.#clickHashTablesSubpage = value;
-        this.#clickHashTablesSubpage.addEventListener("click", () => this.#displayContent("hashTablesSubpage"));
+    #setClickDataStructureSubpage(value) {
+        this.#clickDataStructureSubpage = value;
+        this.#clickDataStructureSubpage.addEventListener("click", () => this.#displayContent("dataStructureSubpage"));
     }
 
     async #displayContent(key) {
@@ -110,8 +96,7 @@ class CodePageSubpageConverter {
     get pages() {
         return [
             this.#clickRecursionSubpage,
-            this.#clickBinarySearchSubpage,
-            this.#clickHashTablesSubpage
+            this.#clickDataStructureSubpage
         ];
     }
 }
