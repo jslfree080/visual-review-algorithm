@@ -28,17 +28,20 @@ class CodePageSubpageConverter {
     #clickRecursionSubpage;
     #clickDataStructureSubpage;
     #pageMainSection;
+    #sideMenuSection;
 
     static content = {
         recursionSubpage: {
             index: 0,
             id: "recursion-subpage",
-            main: recursionSubpageMain
+            main: recursionSubpageMain,
+            sideMenuFontSize: "1.2vw"
         },
         dataStructureSubpage: {
             index: 1,
             id: "data-structure-subpage",
-            main: dataStructureSubpageMain
+            main: dataStructureSubpageMain,
+            sideMenuFontSize: "0.89vw"
         }
     }
 
@@ -46,12 +49,14 @@ class CodePageSubpageConverter {
         pageSection = document.getElementsByClassName("page"),
         clickRecursionSubpage = document.getElementById("click-recursion-subpage"),
         clickDataStructureSubpage = document.getElementById("click-data-structure-subpage"),
-        pageMainSection = document.getElementsByClassName("page-main")
+        pageMainSection = document.getElementsByClassName("page-main"),
+        sideMenuSection = document.getElementsByClassName("sidemenu")
     ) {
         this.#pageSection = pageSection;
         this.#setClickRecursionSubpage(clickRecursionSubpage);
         this.#setClickDataStructureSubpage(clickDataStructureSubpage);
         this.#pageMainSection = pageMainSection;
+        this.#sideMenuSection = sideMenuSection;
     }
 
     #setClickRecursionSubpage(value) {
@@ -69,6 +74,7 @@ class CodePageSubpageConverter {
         this.#pageSection[0].style.backgroundColor = "#FFFEE9";
         this.#pageSection[0].setAttribute("id", CodePageSubpageConverter.content[key].id);
         this.#pageMainSection[0].innerHTML = CodePageSubpageConverter.content[key].main;
+        this.#sideMenuSection[0].style.fontSize = CodePageSubpageConverter.content[key].sideMenuFontSize;
 
         // For "sidepage" and "sidepage-main", getElementsByClassName works only after CodePageSubpageConverter.content[key].main is written
         const { CodePageSubpageSidepageConverter } = await import(`./code-page-subpage-sidepage-converter.js`);

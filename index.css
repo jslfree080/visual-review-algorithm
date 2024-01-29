@@ -25,7 +25,7 @@ body {
     margin: auto 13.5%;
     background-color: #f0f0f0;
     background-size: 100% 100%, 30% 30%, 100% 100%;
-    min-height: 53rem;
+    min-height: 103rem;
 }
 
 @media screen and (max-width: 1120px) {
@@ -37,7 +37,7 @@ body {
 
 .page {
     background-color: white;
-    min-height: 53rem;
+    min-height: 103rem;
 }
 
 nav {
@@ -193,7 +193,7 @@ main {
     padding: 70px 0px;
     background-color: #f0f0f0;
     width: 25%;
-    height: 53rem;
+    height: 103rem;
 }
 
 .sidemenu {

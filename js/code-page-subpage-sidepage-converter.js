@@ -21,10 +21,11 @@
 // SOFTWARE.
 
 import { recursionSubpageItem } from './page-main-section/code-page-subpage/recursion-subpage-main.js';
+import { dataStructureSubpageItem } from './page-main-section/code-page-subpage/data-structure-subpage-main.js';
 
 export class CodePageSubpageSidepageConverter {
     #sidepageSection;
-    #recursionSubpageItem;
+    #subpageItems;
     #sidepageMainSection;
 
     constructor(
@@ -32,20 +33,26 @@ export class CodePageSubpageSidepageConverter {
         sidepageMainSection = document.getElementsByClassName("sidepage-main")
     ) {
         this.#sidepageSection = sidepageSection;
-        this.#setClickCodePageSubpageSidepage(recursionSubpageItem);
+        let subpageItems = {
+            ...recursionSubpageItem,
+            ...dataStructureSubpageItem
+        };
+        this.#setClickCodePageSubpageSidepage(subpageItems);
         this.#sidepageMainSection = sidepageMainSection;
     }
 
     #setClickCodePageSubpageSidepage(value) {
-        this.#recursionSubpageItem = value;
-        for (const key of Object.keys(this.#recursionSubpageItem)) {
+        this.#subpageItems = value;
+        for (const key of Object.keys(this.#subpageItems)) {
             const key2 = "click-" + key.toLowerCase().replace(/ /g, "-") + "-sidepage";
-            document.getElementById(key2).addEventListener("click", () => this.#displayContent(key));
+            if (document.getElementById(key2)) {
+                document.getElementById(key2).addEventListener("click", () => this.#displayContent(key));
+            }
         }
     }
 
     #displayContent(key) {
         this.#sidepageSection[0].setAttribute("id", key.toLowerCase().replace(/ /g, "-"));
-        this.#sidepageMainSection[0].innerHTML = `<pre><code>${this.#recursionSubpageItem[key]}</code></pre>`;
+        this.#sidepageMainSection[0].innerHTML = `<pre><code>${this.#subpageItems[key]}</code></pre>`;
     }
 }
