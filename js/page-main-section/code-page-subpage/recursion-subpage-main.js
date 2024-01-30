@@ -22,14 +22,17 @@
 
 const recursionSubpageItem = {
     "Ackermann":
-        `function ackermann(m, n) {
-    if (m == 0) {
-        return n + 1;
-    } else if (n == 0) {
-        return ackermann(m - 1, 1);
+        `function ackermann(m, n, memo = {}) {
+    const key = [m, n];
+    if (memo[key] !== undefined) return memo[key];
+    if (m == 0) memo[key] = n + 1;
+
+    else if (n == 0) {
+        memo[key] = ackermann(m - 1, 1, memo);
     } else {
-        return ackermann(m - 1, ackermann(m, n - 1));
+        memo[key] = ackermann(m - 1, ackermann(m, n - 1, memo), memo);
     }
+    return memo[key];
 }`,
     "Binary Search":
         `function binarySearch(sortedArray, value, left = 0, right = sortedArray.length - 1) {
