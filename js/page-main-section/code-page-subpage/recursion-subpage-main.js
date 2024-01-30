@@ -115,9 +115,12 @@ const recursionSubpageItem = {
     return num * factorial(num - 1);
 }`,
     "Fibonacci":
-        `function fibonacci(n) {
+        `function fibonacci(n, memo = {}) {
+    if (memo[n] !== undefined) return memo[n];
     if (n <= 2) return 1;
-    return fibonacci(n - 1) + fibonacci(n - 2);
+
+    memo[n] = fibonacci(n - 1, memo) + fibonacci(n - 2, memo);
+    return memo[n];
 }`,
     "Flatten":
         `function flatten(arrayOfArrays) {
