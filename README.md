@@ -20,7 +20,7 @@ function memoizer(recursiveFunc) {
     };
 }
 
-// Define the Fibonacci function
+// Define the fibonacci function
 function fibonacci(n) {
     if (n <= 2) {
         return 1;
@@ -28,9 +28,9 @@ function fibonacci(n) {
     return fibonacci(n - 1) + fibonacci(n - 2);
 }
 
-// Create a memoized version of the Fibonacci function
+// Create a memoized version of the fibonacci function
 const memoizedFibonacci = memoizer(fibonacci);
 
 // Example usage:
-const result = memoizedFibonacci(40); // Calculate Fibonacci(40) with memoization
+const result = memoizedFibonacci(40); // Calculate fibonacci(40) with memoization
 console.log(result); // Output: 102334155
