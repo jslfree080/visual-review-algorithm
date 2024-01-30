@@ -240,6 +240,54 @@ class SinglyLinkedList {
         [this.#head, this.#tail] = [this.#tail, this.#head];
         return this;
     }
+}`,
+    "Stack":
+        `class Node {
+    constructor(value) {
+        this.value = value; // piece of data
+        this.next = null; // reference to next node
+    }
+}
+
+// LIFO (Last-In First-Out)
+class Stack {
+    #first;
+    #last;
+    #size;
+
+    constructor() {
+        this.#first = null;
+        this.#last = null;
+        this.#size = 0;
+    }
+
+    // similar to the linked list's unshift method
+    push(value) {
+        const newNode = new Node(value);
+        if (!this.#first) {
+            this.#first = newNode;
+            this.#last = newNode;
+        } else {
+            const preNode = this.#first;
+            this.#first = newNode;
+            this.#first.next = preNode;
+        }
+        return ++this.#size;
+    }
+
+    // similar to the linked list's shift method
+    pop() {
+        if (!this.#first) return undefined;
+        const poppedNode = this.#first;
+        if (this.#size === 1) {
+            this.#first = null;
+            this.#last = null;
+        } else {
+            this.#first = poppedNode.next;
+        }
+        this.#size--;
+        return poppedNode.value;
+    }
 }`
 };
 
